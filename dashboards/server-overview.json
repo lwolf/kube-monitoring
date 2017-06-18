@@ -365,8 +365,8 @@
           ],
           "targets": [
             {
-              "expr": "(node_filesystem_size{fstype=\"ext4\",instance=~\"$node:.*\"} - node_filesystem_free{fstype=\"ext4\",instance=~\"$node:.*\"}) / deriv(node_filesystem_free{fstype=\"ext4\",instance=~\"$node:.*\"}[1d]) > 0",
-              "format": "table",
+              "expr": "avg by (device) ((node_filesystem_size{fstype=\"ext4\",instance=~\"$node:.*\"} - node_filesystem_free{fstype=\"ext4\",instance=~\"$node:.*\"}) / deriv(node_filesystem_free{fstype=\"ext4\",instance=~\"$node:.*\"}[4h]) > 0)",
+              "format": "time_series",
               "intervalFactor": 2,
               "legendFormat": "{{device}}",
               "refId": "A",
@@ -374,7 +374,7 @@
             }
           ],
           "title": "FileSystem Fill Up Time",
-          "transform": "table",
+          "transform": "timeseries_aggregations",
           "type": "table"
         }
       ],
