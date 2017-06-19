@@ -302,7 +302,7 @@
           "tableColumn": "",
           "targets": [
             {
-              "expr": "sum(((node_filesystem_size{fstype=\"ext4\",instance=~\"$node:.*\",mountpoint=\"/etc/hostname\"} - node_filesystem_free{fstype=\"ext4\",instance=~\"$node:.*\",mountpoint=\"/etc/hostname\"}) / node_filesystem_size{fstype=\"ext4\",instance=~\"$node:.*\",mountpoint=\"/etc/hostname\"})) * 100",
+              "expr": "sum((node_filesystem_size{instance=~\"$node:.*\",mountpoint=\"/rootfs\"} - node_filesystem_free{instance=~\"$node:.*\",mountpoint=\"/rootfs\"}) / node_filesystem_size{instance=~\"$node:.*\",mountpoint=\"/rootfs\"}) * 100",
               "format": "time_series",
               "hide": false,
               "intervalFactor": 2,
@@ -339,8 +339,8 @@
           "scroll": true,
           "showHeader": true,
           "sort": {
-            "col": 0,
-            "desc": true
+            "col": null,
+            "desc": false
           },
           "span": 4,
           "styles": [
@@ -365,14 +365,15 @@
           ],
           "targets": [
             {
-              "expr": "avg by (device) ((node_filesystem_size{fstype=\"ext4\",instance=~\"$node:.*\"} - node_filesystem_free{fstype=\"ext4\",instance=~\"$node:.*\"}) / deriv(node_filesystem_free{fstype=\"ext4\",instance=~\"$node:.*\"}[4h]) > 0)",
+              "expr": "avg by (device) (deriv(node_filesystem_free{device=~\"/dev/sd.*\",instance=~\"$node:.*\"}[4h]) > 0)",
               "format": "time_series",
               "intervalFactor": 2,
               "legendFormat": "{{device}}",
               "refId": "A",
-              "step": 60
+              "step": 20
             }
           ],
+          "timeFrom": "1h",
           "title": "FileSystem Fill Up Time",
           "transform": "timeseries_aggregations",
           "type": "table"
@@ -1149,5 +1150,5 @@
   },
   "timezone": "browser",
   "title": "NewRelic",
-  "version": 8
+  "version": 3
 }
