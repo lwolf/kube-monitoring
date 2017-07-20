@@ -1,4 +1,14 @@
 {
+  "__inputs": [
+    {
+      "name": "DATASOURCE_NAME",
+      "label": "prometheus",
+      "description": "",
+      "type": "datasource",
+      "pluginId": "prometheus",
+      "pluginName": "Prometheus"
+    }
+  ],
   "annotations": {
     "list": []
   },
@@ -24,7 +34,7 @@
             "rgba(237, 129, 40, 0.89)",
             "rgba(50, 172, 45, 0.97)"
           ],
-          "datasource": null,
+          "datasource": "${DATASOURCE_NAME}",
           "decimals": 1,
           "format": "decbytes",
           "gauge": {
@@ -101,7 +111,7 @@
             "rgba(237, 129, 40, 0.89)",
             "rgba(50, 172, 45, 0.97)"
           ],
-          "datasource": null,
+          "datasource": "${DATASOURCE_NAME}",
           "format": "none",
           "gauge": {
             "maxValue": 100,
@@ -177,7 +187,7 @@
             "rgba(237, 129, 40, 0.89)",
             "rgba(50, 172, 45, 0.97)"
           ],
-          "datasource": null,
+          "datasource": "${DATASOURCE_NAME}",
           "decimals": 1,
           "format": "s",
           "gauge": {
@@ -254,7 +264,7 @@
             "rgba(237, 129, 40, 0.89)",
             "rgba(245, 54, 54, 0.9)"
           ],
-          "datasource": null,
+          "datasource": "${DATASOURCE_NAME}",
           "decimals": 0,
           "format": "percent",
           "gauge": {
@@ -395,7 +405,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": null,
+          "datasource": "${DATASOURCE_NAME}",
           "fill": 1,
           "id": 3,
           "legend": {
@@ -493,7 +503,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": null,
+          "datasource": "${DATASOURCE_NAME}",
           "fill": 4,
           "id": 1,
           "legend": {
@@ -607,7 +617,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": null,
+          "datasource": "${DATASOURCE_NAME}",
           "fill": 1,
           "id": 2,
           "legend": {
@@ -715,7 +725,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": null,
+          "datasource": "${DATASOURCE_NAME}",
           "fill": 6,
           "id": 4,
           "legend": {
@@ -800,7 +810,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": null,
+          "datasource": "${DATASOURCE_NAME}",
           "fill": 1,
           "id": 5,
           "legend": {
@@ -899,7 +909,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": null,
+          "datasource": "${DATASOURCE_NAME}",
           "fill": 1,
           "height": "",
           "id": 13,
@@ -992,7 +1002,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": null,
+          "datasource": "${DATASOURCE_NAME}",
           "fill": 4,
           "id": 14,
           "legend": {

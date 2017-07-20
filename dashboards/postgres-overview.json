@@ -1,4 +1,14 @@
 {
+  "__inputs": [
+    {
+      "name": "DATASOURCE_NAME",
+      "label": "prometheus",
+      "description": "",
+      "type": "datasource",
+      "pluginId": "prometheus",
+      "pluginName": "Prometheus"
+    }
+  ],
   "annotations": {
     "list": []
   },
@@ -20,7 +30,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "default",
+          "datasource": "${DATASOURCE_NAME}",
           "editable": true,
           "error": false,
           "fill": 1,
@@ -363,7 +373,7 @@
             "rgba(237, 129, 40, 0.89)",
             "rgba(50, 172, 45, 0.97)"
           ],
-          "datasource": "default",
+          "datasource": "${DATASOURCE_NAME}",
           "decimals": 0,
           "editable": true,
           "error": false,
@@ -484,7 +494,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "default",
+          "datasource": "${DATASOURCE_NAME}",
           "decimals": 1,
           "editable": true,
           "error": false,
@@ -815,7 +825,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "default",
+          "datasource": "${DATASOURCE_NAME}",
           "editable": true,
           "error": false,
           "fill": 1,
@@ -1001,7 +1011,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "default",
+          "datasource": "${DATASOURCE_NAME}",
           "editable": true,
           "error": false,
           "fill": 1,
@@ -1080,7 +1090,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "default",
+          "datasource": "${DATASOURCE_NAME}",
           "editable": true,
           "error": false,
           "fill": 1,
@@ -1264,7 +1274,7 @@
           "text": "dusty-buffoon-postgresql",
           "value": "dusty-buffoon-postgresql"
         },
-        "datasource": "default",
+        "datasource": "${DATASOURCE_NAME}",
         "hide": 0,
         "includeAll": false,
         "label": null,
@@ -1287,7 +1297,7 @@
           "text": "booksy",
           "value": "booksy"
         },
-        "datasource": "default",
+        "datasource": "${DATASOURCE_NAME}",
         "hide": 0,
         "includeAll": true,
         "label": "db",
