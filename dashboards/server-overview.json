@@ -1110,7 +1110,7 @@
           "text": "",
           "value": ""
         },
-        "datasource": "prom",
+        "datasource": "${DATASOURCE_NAME}",
         "hide": 0,
         "includeAll": false,
         "label": "node",
